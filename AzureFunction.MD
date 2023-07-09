@@ -26,7 +26,7 @@ There are two ways we can run .net code in function app: InProcess and Isolated.
 | Durable Function       | Supported | Not supported 
 | Middleware             | Not Supported | Supported | 
 | Cold Start             | Typical   | Longer | 
-| ReadyToRun             | Supported | TBD | 
+| ReadyToRun             | Supported | Supported | 
 
 
 
