@@ -47,9 +47,11 @@ Can use [dependency-injection] (https://learn.microsoft.com/en-us/azure/azure-fu
 
 ## Structure
 **Function** is _part of_ --> **Function App**
+
 **Function App** is _hosted on__ --> **host**
 
 Function app are **not sticky to host** . It might change over the time as per the availibility of the VMs . (other than dedicated plan)
+
 if DI is used, Singletone lifetime is renewed if host is changed.
 
 
