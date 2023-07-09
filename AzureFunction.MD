@@ -58,4 +58,15 @@ if DI is used, Singletone lifetime is renewed if host is changed.
 this Host is defined by App Service Plan.
 
 ## Durable Function 
-Based on open source framework: Azure Durable Task Framework
+#### Durable Function framework: Based on open source framework: Azure Durable Task Framework
+#### Task Hub: task hub is used by the durable task framework to store and track the state of orchestrator method and deliver messages between activities.
+#### Orchestrator Function: Durable function runtime provides all the task management capabilities to this Function.
+#### Activity function: Normal functions. Do not have Expiry time. 
+#### Entity Function: It can have state. Can read and write data from Task hub.
+#### Client Function: called by client, such as process outside of durable function runtime. Purpose is to raise event in durable function runtime, may to continue the excecution or cancel it.
+
+Durable Function contains 3 types of Methods:
+1. Start Method: This is the entry point to durable function workflow. whenever invoked, it generate the instance and returns to the caller. 
+1. Activity Methods: This are the methods, which actully performs the tasks. 
+1. Orchestrator Method: This is the heart of the durable function.
+This method uses azure storage queue to persist the state of the currently running process. (Task hub) 
