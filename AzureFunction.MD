@@ -10,6 +10,25 @@ With v4, .net6+ are supported now. .net3 is also depreacated with v3.
 
 ## Function Runtime Types in v4:
 There are two ways we can run .net code in function app: InProcess and Isolated. 
+| Item                  | In Process | Isolated |
+|-----------------------|------------|----------|
+| .Net                   | LTS only (3.1, 6) | All |
+| Cancellation Tokens    | Supported | Not Supported |
+| Core package           | Microsoft.NET.Sdk.Function | Microsoft.Azure.Functions.Worker |
+| Binding Ext            | Microsoft.Azure.Webjobs.Extenstions.* | Microsoft.Azure.Functions.Worker.Extenstions.* |
+| Output Binding         | Out parameter | return values |
+| Output Types           | client specific | Simple types, Serializable, array | 
+| Multiple Output        | Supported | Supported | 
+| Imperative binding     | Supported | Not Supported |
+| Function.Json artifact | Generated | Not Generated | 
+| Configuration          | host.json | host.json + custom initialization | 
+| DI                     | Supported | Supported |
+| Durable Function       | Supported | Not supported 
+| Middleware             | Not Supported | Supported | 
+| Cold Start             | Typical   | Longer | 
+| ReadyToRun             | Supported | TBD | 
+
+
 
 ## Types of Plan
 | Plan | Shared VM | Billing | Expiry time |
