@@ -46,11 +46,14 @@ Run method need not be static.
 Can use [dependency-injection] (https://learn.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection) with function using `class Startup` which inherits `FunctionsStartup`
 
 ## Structure
-**Function** is _part of_ -> **Function App**
-Function App _hosted_ -> host
+**Function** is _part of_ --> **Function App**
+**Function App** is _hosted on__ --> **host**
 
-Function app are not sticky to host. It might change over the time as per the availibility of the VMs . (other than dedicated plan)
+Function app are **not sticky to host** . It might change over the time as per the availibility of the VMs . (other than dedicated plan)
 if DI is used, Singletone lifetime is renewed if host is changed.
 
 
 this Host is defined by App Service Plan.
+
+## Durable Function 
+Based on open source framework: Azure Durable Task Framework
