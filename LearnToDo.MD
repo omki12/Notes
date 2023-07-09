@@ -1,5 +1,5 @@
 | Item | Priority |
 |------|----------|
-| 12 Factor applications. (Saas) | Low `rgb(100, 0, 0)` `#0969DA` |
-| Domain Driven Design |  High `rgb(0, 100, 0)` |
-| Event Driven System Vs Microservices | $${\color{green}Medium}$$ |
+| 12 Factor applications. (Saas) | $${\color{Blue} Low }$$ |
+| Domain Driven Design |  $${\color{Green} High }$$ |
+| Event Driven System Vs Microservices | $${\color{Blue} Medium }$$ |
