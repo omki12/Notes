@@ -79,16 +79,16 @@ Any time we need to update an function, we need to deploy all the functions in t
 1. Using multiple App services
   - Different App service for each version. Cost might increase.
   - New URL for each version of App service. (Breaking changes in dependent applications.)
-1. Different Versions in different slots
+2. Different Versions in different slots
   - Cannot use with consumption plan as it doesn't support slots.
   - New URL for each version of App service. (Breaking changes in dependent applications.)
-1. Function proxies
+3. Function proxies
   - In function code, write new logic, and route traffic to new version depending on input.
   - Deprecated. Use APIM
-1. API Management
+4. API Management
   - Use APIM as facade for HTTP triggered functions. 
   - Only for HTTP triggered functions.
   - Route based on content, headers or URL.
 
-- Make Sure function are idempotent.
+* Make Sure function are idempotent.
  
