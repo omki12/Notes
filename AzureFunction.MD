@@ -92,3 +92,4 @@ Any time we need to update an function, we need to deploy all the functions in t
 
 * Make Sure function are idempotent.
  
+[Best Practices](https://learn.microsoft.com/en-us/azure/azure-functions/performance-reliability#make-sure-background-tasks-complete)
